@@ -37,6 +37,6 @@ To run this locally,
 2. Create OpenAI and Pinecone Accounts if not created already and get the API keys for both these platforms
 3. In the main working directory, use 
 
-'''
+```
 streamlit run Home.py --server.port=8501 --server.address=0.0.0.0
-'''
+```
