@@ -29,3 +29,14 @@ This tool achieves this by using the following flow :
 1. Langchain - For Recursive text splitting
 2. OpenAI - For calls to Models and Embeddings
 3. Streamlit - for frontend
+
+## How to run this locally 
+
+To run this locally, 
+1. Create a virtual environment and install the dependencies from requirements.txt
+2. Create OpenAI and Pinecone Accounts if not created already and get the API keys for both these platforms
+3. In the main working directory, use 
+
+'''
+streamlit run Home.py --server.port=8501 --server.address=0.0.0.0
+'''
