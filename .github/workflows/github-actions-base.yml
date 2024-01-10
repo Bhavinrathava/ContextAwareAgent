@@ -57,5 +57,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: bhavinrathava/CAB:${{ github.sha }}
+          tags: bhavindocker98/base-dev-repo:${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
