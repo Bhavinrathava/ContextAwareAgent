@@ -18,3 +18,16 @@ jobs:
     - name: Running Test Cases
       uses: actions/checkout@v4
     - run: python3 ./tests.py
+
+  building-docker-image:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Building Docker Image
+      uses: actions/checkout@v4
+    - run: docker build -t github-actions .
+    - run: docker images
+    - run: docker run -d -p 5000:5000 github-actions
+    - run: docker ps -a
+    - run: docker stop $(docker ps -a -q)
+    - run: docker rm $(docker ps -a -q)
+    - run: docker rmi $(docker images -q)
