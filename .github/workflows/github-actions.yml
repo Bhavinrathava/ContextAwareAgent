@@ -1,0 +1,13 @@
+name: github-actions
+on: [push]
+jobs:
+  initial-commit-check:
+    runs-on: ubuntu-latest
+    steps: 
+    - run: echo "Running tests..."
+    - run: echo "Current Branch: ${{ github.ref }}"
+    - run: echo "Current Commit: ${{ github.sha }}" 
+    - run: echo "Current Commit Message: ${{ github.event.head_commit.message }}"
+    - name: Checkout
+      uses: actions/checkout@v4
+    - run: echo " ${{ github.repository }} has been cloned"
