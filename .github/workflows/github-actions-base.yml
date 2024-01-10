@@ -17,4 +17,4 @@ jobs:
     steps: 
     - name: Running Test Cases
       uses: actions/checkout@v4
-    - run: python3 ./test.py
+    - run: python3 ./tests.py
