@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: Set up GKE
-        uses: google-github-actions/setup-gcloud
+        uses: google-github-actions/setup-gcloud@main
         with:
           project_id: ${{secrets.GOOGLE_PROJECT_NAME}}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
