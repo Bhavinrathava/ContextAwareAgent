@@ -46,5 +46,5 @@ jobs:
 
       - name: Deploy to GKE
         run: |
-          gcloud container clusters get-credentials autopilot-cluster-1 --zone us-central1 --project ${{secrets.GOOGLE_PROJECT_NAME}}
+          gcloud container clusters get-credentials cluster-1 --zone us-central1 --project ${{secrets.GOOGLE_PROJECT_NAME}}
           kubectl apply -f resources.yml
